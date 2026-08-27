@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://shubvlopxymy"]
+
+[ext_resource type="Script" uid="uid://ptloxnb73fpj" path="res://Scripts/Menu/menu_hud.gd" id="1_3kf3n"]
+[ext_resource type="FontFile" uid="uid://jdewj2mna65g" path="res://Font/Nyntunkocom Font/Nyntunkocom.ttf" id="2_6pedr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vko3y"]
+font = ExtResource("2_6pedr")
+
+[node name="Node2D" type="Node2D" unique_id=160114515]
+
+[node name="MenuHUD" type="CanvasGroup" parent="." unique_id=1927890801]
+script = ExtResource("1_3kf3n")
+
+[node name="name" type="Label" parent="MenuHUD" unique_id=62606709]
+offset_left = 177.0
+offset_top = 91.0
+offset_right = 274.0
+offset_bottom = 114.0
+text = "Santa Mercê"
+label_settings = SubResource("LabelSettings_vko3y")
+
+[node name="NG" type="Button" parent="MenuHUD" unique_id=320542299]
+offset_left = 185.0
+offset_top = 208.0
+offset_right = 278.0
+offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("2_6pedr")
+text = "New Game"

@@ -58,6 +58,7 @@ scale = Vector2(4.2559867, 2.3120565)
 polygon = PackedVector2Array(1.8717213, -3.5106888, 6.3011665, -1.6948681, -3.405325, 2.2508163, -8.005098, 0.43530273)
 
 [node name="Bed" type="Node2D" parent="." unique_id=1570761424]
+z_index = 2
 position = Vector2(253, 331)
 metadata/_edit_group_ = true
 
