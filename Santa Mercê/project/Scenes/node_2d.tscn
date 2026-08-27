@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://shubvlopxymy"]
 
-[node name="Node2D" type="Node2D" unique_id=160114515]
+[node name="Menu Inicial" type="Node2D" unique_id=160114515]
 
 [node name="MenuHUD" type="CanvasGroup" parent="." unique_id=1927890801]
 

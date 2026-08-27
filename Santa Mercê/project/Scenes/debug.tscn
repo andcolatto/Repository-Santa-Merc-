@@ -2,16 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://c3cu22wmimnfs" path="res://Sprites/debug background.png" id="1_raf04"]
 [ext_resource type="Texture2D" uid="uid://cgdxisow5chj8" path="res://Planning sprites/amanda placeholder.png" id="2_axs6p"]
+[ext_resource type="Script" uid="uid://bjowwkq7eyb2g" path="res://Scripts/Amanda/movement.gd" id="2_quvyc"]
+[ext_resource type="Texture2D" uid="uid://cc0jgj1ggqs8x" path="res://Planning sprites/computer placeholder.png" id="4_fee55"]
+[ext_resource type="Texture2D" uid="uid://djoev6aa5lgdn" path="res://Planning sprites/bed placeholder.png" id="5_5mfbk"]
+[ext_resource type="Texture2D" uid="uid://ca2eqb1a7ahmv" path="res://Planning sprites/door placeholder.png" id="6_j2m1g"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_axs6p"]
-size = Vector2(20, 40)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkn34"]
+height = 48.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_edppr"]
 
 [node name="Main" type="Node2D" unique_id=1381334392]
 
 [node name="Debug background" type="Sprite2D" parent="." unique_id=1753081589]
-z_index = 1
 texture = ExtResource("1_raf04")
 offset = Vector2(230, 200)
+metadata/_edit_group_ = true
 
 [node name="ColorRect" type="ColorRect" parent="Debug background" unique_id=1046692238]
 z_index = -1
@@ -20,14 +26,61 @@ offset_bottom = 400.0
 color = Color(0, 0, 0, 1)
 
 [node name="Amanda" type="Node2D" parent="." unique_id=1790831288]
+metadata/_edit_group_ = true
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Amanda" unique_id=438428807]
 z_index = 2
 position = Vector2(224, 210)
+motion_mode = 1
+script = ExtResource("2_quvyc")
 
 [node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
 position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_axs6p")
+shape = SubResource("CapsuleShape2D_qkn34")
 
-[node name="Amanda placeholder" type="Sprite2D" parent="Amanda/CharacterBody2D" unique_id=833914404]
+[node name="Amanda placeholder" type="Sprite2D" parent="Amanda/CharacterBody2D/HitBox" unique_id=833914404]
 texture = ExtResource("2_axs6p")
+offset = Vector2(0, 1)
+
+[node name="Computer" type="Node2D" parent="." unique_id=622820949]
+position = Vector2(125, 226)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer" unique_id=815246210]
+texture = ExtResource("4_fee55")
+
+[node name="PC Collision" type="StaticBody2D" parent="Computer/Sprite2D" unique_id=1078581435]
+scale = Vector2(1.3794899, 3.0829527)
+
+[node name="PC Collision (polygon)" type="CollisionPolygon2D" parent="Computer/Sprite2D/PC Collision" unique_id=1918094138]
+rotation = 0.0009789891
+scale = Vector2(4.2559867, 2.3120565)
+polygon = PackedVector2Array(1.8717213, -3.5106888, 6.3011665, -1.6948681, -3.405325, 2.2508163, -8.005098, 0.43530273)
+
+[node name="Bed" type="Node2D" parent="." unique_id=1570761424]
+position = Vector2(253, 331)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=1951285871]
+texture = ExtResource("5_5mfbk")
+
+[node name="Door" type="Node2D" parent="." unique_id=931465619]
+position = Vector2(275, 151)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Door" unique_id=656634958]
+texture = ExtResource("6_j2m1g")
+
+[node name="Computer2" type="Node2D" parent="." unique_id=471890684]
+visible = false
+position = Vector2(125, 226)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer2" unique_id=611673108]
+texture = ExtResource("4_fee55")
+
+[node name="Collision" type="StaticBody2D" parent="Computer2/Sprite2D" unique_id=213073388]
+scale = Vector2(2.35, 2.9583333)
+
+[node name="Colisão mesa" type="CollisionShape2D" parent="Computer2/Sprite2D/Collision" unique_id=405908519]
+shape = SubResource("RectangleShape2D_edppr")
