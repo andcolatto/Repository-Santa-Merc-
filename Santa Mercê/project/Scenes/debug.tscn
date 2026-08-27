@@ -1,3 +1,32 @@
 [gd_scene format=3 uid="uid://c5ka5ss8ak2j8"]
 
+[ext_resource type="Texture2D" uid="uid://c3cu22wmimnfs" path="res://Sprites/debug background.png" id="1_raf04"]
+[ext_resource type="Texture2D" uid="uid://cgdxisow5chj8" path="res://Planning sprites/amanda placeholder.png" id="2_axs6p"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_axs6p"]
+size = Vector2(20, 40)
+
 [node name="Main" type="Node2D" unique_id=1381334392]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1753081589]
+z_index = 1
+texture = ExtResource("1_raf04")
+offset = Vector2(230, 200)
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1046692238]
+offset_right = 460.0
+offset_bottom = 400.0
+color = Color(0, 0, 0, 1)
+
+[node name="Amanda" type="Node2D" parent="." unique_id=1790831288]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Amanda" unique_id=438428807]
+z_index = 2
+position = Vector2(224, 211)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_axs6p")
+
+[node name="Amanda placeholder" type="Sprite2D" parent="Amanda/CharacterBody2D" unique_id=833914404]
+texture = ExtResource("2_axs6p")
