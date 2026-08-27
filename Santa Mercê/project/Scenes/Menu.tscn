@@ -1,12 +1,26 @@
 [gd_scene format=3 uid="uid://shubvlopxymy"]
 
 [ext_resource type="Script" uid="uid://ptloxnb73fpj" path="res://Scripts/Menu/menu_hud.gd" id="1_3kf3n"]
+[ext_resource type="AudioStream" uid="uid://3i2pt7aj3ye0" path="res://SFX/Enter.wav" id="1_ma218"]
 [ext_resource type="FontFile" uid="uid://jdewj2mna65g" path="res://Font/Nyntunkocom Font/Nyntunkocom.ttf" id="2_6pedr"]
+[ext_resource type="AudioStream" uid="uid://b2fns6vulk6x3" path="res://SFX/New Game.wav" id="2_idohh"]
+[ext_resource type="AudioStream" uid="uid://b5lvu1fgedpvf" path="res://SFX/Select.wav" id="3_wfhf6"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vko3y"]
 font = ExtResource("2_6pedr")
 
 [node name="Node2D" type="Node2D" unique_id=160114515]
+
+[node name="Enter" type="AudioStreamPlayer" parent="." unique_id=1038034181]
+stream = ExtResource("1_ma218")
+volume_db = -9.123
+
+[node name="NewGame" type="AudioStreamPlayer" parent="." unique_id=141810784]
+stream = ExtResource("2_idohh")
+volume_db = 5.474
+
+[node name="Select" type="AudioStreamPlayer" parent="." unique_id=668149281]
+stream = ExtResource("3_wfhf6")
 
 [node name="MenuHUD" type="CanvasGroup" parent="." unique_id=1927890801]
 script = ExtResource("1_3kf3n")
