@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://c3cu22wmimnfs" path="res://Sprites/debug background.png" id="1_raf04"]
 [ext_resource type="Texture2D" uid="uid://cgdxisow5chj8" path="res://Planning sprites/amanda placeholder.png" id="2_axs6p"]
-[ext_resource type="Script" uid="uid://bjowwkq7eyb2g" path="res://Scripts/Amanda/movement.gd" id="2_quvyc"]
+[ext_resource type="Script" uid="uid://bjowwkq7eyb2g" path="res://Scripts/Amanda/movement.gd" id="2_fee55"]
 [ext_resource type="Texture2D" uid="uid://bh77ywgrvgxu" path="res://Icon/intIcon.png" id="4_5mfbk"]
 [ext_resource type="Texture2D" uid="uid://cc0jgj1ggqs8x" path="res://Planning sprites/computer placeholder.png" id="4_fee55"]
 [ext_resource type="Texture2D" uid="uid://djoev6aa5lgdn" path="res://Planning sprites/bed placeholder.png" id="5_5mfbk"]
@@ -27,14 +27,12 @@ offset_bottom = 400.0
 color = Color(0, 0, 0, 1)
 
 [node name="Amanda" type="Node2D" parent="." unique_id=1790831288]
-metadata/_edit_group_ = true
+position = Vector2(248, 131)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Amanda" unique_id=438428807 groups=["Amanda"]]
 z_index = 2
-position = Vector2(224, 210)
 motion_mode = 1
-script = ExtResource("2_quvyc")
-speed = 150.0
+script = ExtResource("2_fee55")
 
 [node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
 position = Vector2(0, -1)
