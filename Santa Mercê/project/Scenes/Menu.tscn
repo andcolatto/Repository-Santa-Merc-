@@ -40,3 +40,6 @@ offset_right = 278.0
 offset_bottom = 239.0
 theme_override_fonts/font = ExtResource("2_6pedr")
 text = "New Game"
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=642123136]
+position = Vector2(230, 200)

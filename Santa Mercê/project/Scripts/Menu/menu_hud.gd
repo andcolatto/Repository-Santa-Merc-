@@ -3,6 +3,7 @@ extends CanvasGroup
 @onready var NGb = $NG # is a variable for get New Game button
 @onready var ESFX = $"../NewGame"
 @onready var SeFX = $"../Select"
+@onready var cam2D = $"../Camera2D"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
