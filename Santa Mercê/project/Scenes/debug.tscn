@@ -9,9 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ca2eqb1a7ahmv" path="res://Planning sprites/door placeholder.png" id="6_j2m1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fee55"]
-size = Vector2(20, 142.30771)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_edppr"]
+size = Vector2(20, 84.6154)
 
 [node name="Main" type="Node2D" unique_id=1381334392]
 
@@ -40,7 +38,7 @@ texture = ExtResource("2_axs6p")
 offset = Vector2(0, 1)
 
 [node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
-position = Vector2(0, -1)
+position = Vector2(0, 14)
 scale = Vector2(1, 0.52)
 shape = SubResource("RectangleShape2D_fee55")
 
@@ -61,7 +59,7 @@ scale = Vector2(1.3794899, 3.0829527)
 [node name="PC Collision (polygon)" type="CollisionPolygon2D" parent="Computer/PC Collision" unique_id=1918094138]
 rotation = 0.0009789891
 scale = Vector2(4.2559867, 2.3120565)
-polygon = PackedVector2Array(1.8717213, -3.5106888, 6.3011665, -1.6948681, -3.405325, 2.2508163, -8.005098, 0.43530273)
+polygon = PackedVector2Array(3.9154854, -3.794958, 6.981577, -3.3796062, 8.856281, -1.278595, -2.5530987, 3.371624, -8.005098, 0.43530273)
 
 [node name="Area2D" type="Area2D" parent="Computer/PC Collision/PC Collision (polygon)" unique_id=818628707]
 position = Vector2(2.5554128, 0.97744334)
@@ -101,12 +99,6 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Computer2" unique_id=611673108]
 texture = ExtResource("4_fee55")
-
-[node name="Collision" type="StaticBody2D" parent="Computer2/Sprite2D" unique_id=213073388]
-scale = Vector2(2.35, 2.9583333)
-
-[node name="Colisão mesa" type="CollisionShape2D" parent="Computer2/Sprite2D/Collision" unique_id=405908519]
-shape = SubResource("RectangleShape2D_edppr")
 
 [connection signal="tree_entered" from="Computer/PC Collision/PC Collision (polygon)" to="Amanda/CharacterBody2D" method="_on_pc_collision_polygon_tree_entered"]
 [connection signal="body_entered" from="Computer/PC Collision/PC Collision (polygon)/Area2D" to="Amanda/CharacterBody2D" method="_on_area_2d_body_entered"]
