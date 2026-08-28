@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://djoev6aa5lgdn" path="res://Planning sprites/bed placeholder.png" id="5_5mfbk"]
 [ext_resource type="Texture2D" uid="uid://ca2eqb1a7ahmv" path="res://Planning sprites/door placeholder.png" id="6_j2m1g"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qkn34"]
-height = 48.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fee55"]
+size = Vector2(20, 142.30771)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_edppr"]
 
@@ -34,13 +34,15 @@ z_index = 2
 motion_mode = 1
 script = ExtResource("2_fee55")
 
-[node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
+[node name="Amanda placeholder" type="Sprite2D" parent="Amanda/CharacterBody2D" unique_id=833914404]
 position = Vector2(0, -1)
-shape = SubResource("CapsuleShape2D_qkn34")
-
-[node name="Amanda placeholder" type="Sprite2D" parent="Amanda/CharacterBody2D/HitBox" unique_id=833914404]
 texture = ExtResource("2_axs6p")
 offset = Vector2(0, 1)
+
+[node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
+position = Vector2(0, -1)
+scale = Vector2(1, 0.52)
+shape = SubResource("RectangleShape2D_fee55")
 
 [node name="CanvasGroup" type="CanvasGroup" parent="Amanda/CharacterBody2D" unique_id=86083422]
 
@@ -79,6 +81,11 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=1951285871]
 texture = ExtResource("5_5mfbk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Bed" unique_id=1314208189]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bed/StaticBody2D" unique_id=766590341]
+polygon = PackedVector2Array(61, -101, 153, -52, -30, 45, -127, -2)
 
 [node name="Door" type="Node2D" parent="." unique_id=931465619]
 position = Vector2(275, 151)
