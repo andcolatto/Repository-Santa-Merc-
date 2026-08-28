@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ca2eqb1a7ahmv" path="res://Planning sprites/door placeholder.png" id="6_j2m1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fee55"]
-size = Vector2(20, 84.6154)
+size = Vector2(20, 88.46155)
 
 [node name="Main" type="Node2D" unique_id=1381334392]
 
@@ -38,7 +38,7 @@ texture = ExtResource("2_axs6p")
 offset = Vector2(0, 1)
 
 [node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
-position = Vector2(0, 14)
+position = Vector2(0, 13)
 scale = Vector2(1, 0.52)
 shape = SubResource("RectangleShape2D_fee55")
 

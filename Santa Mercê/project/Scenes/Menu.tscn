@@ -5,6 +5,7 @@
 [ext_resource type="FontFile" uid="uid://jdewj2mna65g" path="res://Font/Nyntunkocom Font/Nyntunkocom.ttf" id="2_6pedr"]
 [ext_resource type="AudioStream" uid="uid://b2fns6vulk6x3" path="res://SFX/New Game.wav" id="2_idohh"]
 [ext_resource type="AudioStream" uid="uid://b5lvu1fgedpvf" path="res://SFX/Select.wav" id="3_wfhf6"]
+[ext_resource type="Texture2D" uid="uid://bmao8x6a8gkr4" path="res://Icon/menubck.png" id="6_idohh"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vko3y"]
 font = ExtResource("2_6pedr")
@@ -40,6 +41,12 @@ offset_right = 278.0
 offset_bottom = 239.0
 theme_override_fonts/font = ExtResource("2_6pedr")
 text = "New Game"
+
+[node name="menubackground" type="Sprite2D" parent="MenuHUD" unique_id=1667516001]
+z_index = -1
+position = Vector2(230.99998, 199.5)
+scale = Vector2(0.4472656, 0.3896484)
+texture = ExtResource("6_idohh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=642123136]
 position = Vector2(230, 200)
