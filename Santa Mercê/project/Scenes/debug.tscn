@@ -55,24 +55,24 @@ texture = ExtResource("4_5mfbk")
 position = Vector2(125, 226)
 metadata/_edit_group_ = true
 
-[node name="Sprite2D" type="Sprite2D" parent="Computer" unique_id=815246210]
-texture = ExtResource("4_fee55")
-
-[node name="PC Collision" type="StaticBody2D" parent="Computer/Sprite2D" unique_id=1078581435]
+[node name="PC Collision" type="StaticBody2D" parent="Computer" unique_id=1078581435]
 scale = Vector2(1.3794899, 3.0829527)
 
-[node name="PC Collision (polygon)" type="CollisionPolygon2D" parent="Computer/Sprite2D/PC Collision" unique_id=1918094138]
+[node name="PC Collision (polygon)" type="CollisionPolygon2D" parent="Computer/PC Collision" unique_id=1918094138]
 rotation = 0.0009789891
 scale = Vector2(4.2559867, 2.3120565)
 polygon = PackedVector2Array(1.8717213, -3.5106888, 6.3011665, -1.6948681, -3.405325, 2.2508163, -8.005098, 0.43530273)
 
-[node name="Area2D" type="Area2D" parent="Computer/Sprite2D/PC Collision/PC Collision (polygon)" unique_id=818628707]
+[node name="Area2D" type="Area2D" parent="Computer/PC Collision/PC Collision (polygon)" unique_id=818628707]
 position = Vector2(2.5554128, 0.97744334)
 
-[node name="PC Collision (polygon)2" type="CollisionPolygon2D" parent="Computer/Sprite2D/PC Collision/PC Collision (polygon)/Area2D" unique_id=1716490845]
+[node name="PC Collision (polygon)2" type="CollisionPolygon2D" parent="Computer/PC Collision/PC Collision (polygon)/Area2D" unique_id=1716490845]
 z_index = 2
 scale = Vector2(0.99999994, 1)
 polygon = PackedVector2Array(1.8717213, -3.5106888, 6.3011665, -1.6948681, -3.405325, 2.2508163, -8.005098, 0.43530273)
+
+[node name="Sprite2D" type="Sprite2D" parent="Computer" unique_id=815246210]
+texture = ExtResource("4_fee55")
 
 [node name="Bed" type="Node2D" parent="." unique_id=1570761424]
 z_index = 2
@@ -108,7 +108,7 @@ scale = Vector2(2.35, 2.9583333)
 [node name="Colisão mesa" type="CollisionShape2D" parent="Computer2/Sprite2D/Collision" unique_id=405908519]
 shape = SubResource("RectangleShape2D_edppr")
 
-[connection signal="tree_entered" from="Computer/Sprite2D/PC Collision/PC Collision (polygon)" to="Amanda/CharacterBody2D" method="_on_pc_collision_polygon_tree_entered"]
-[connection signal="body_entered" from="Computer/Sprite2D/PC Collision/PC Collision (polygon)/Area2D" to="Amanda/CharacterBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Computer/Sprite2D/PC Collision/PC Collision (polygon)/Area2D" to="Amanda/CharacterBody2D" method="_on_area_2d_body_exited"]
-[connection signal="tree_entered" from="Computer/Sprite2D/PC Collision/PC Collision (polygon)/Area2D/PC Collision (polygon)2" to="Amanda/CharacterBody2D" method="_on_pc_collision_polygon_tree_entered"]
+[connection signal="tree_entered" from="Computer/PC Collision/PC Collision (polygon)" to="Amanda/CharacterBody2D" method="_on_pc_collision_polygon_tree_entered"]
+[connection signal="body_entered" from="Computer/PC Collision/PC Collision (polygon)/Area2D" to="Amanda/CharacterBody2D" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Computer/PC Collision/PC Collision (polygon)/Area2D" to="Amanda/CharacterBody2D" method="_on_area_2d_body_exited"]
+[connection signal="tree_entered" from="Computer/PC Collision/PC Collision (polygon)/Area2D/PC Collision (polygon)2" to="Amanda/CharacterBody2D" method="_on_pc_collision_polygon_tree_entered"]
