@@ -78,12 +78,13 @@ position = Vector2(253, 331)
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="Bed" unique_id=1951285871]
+z_index = 1
 texture = ExtResource("5_5mfbk")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Bed" unique_id=1314208189]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bed/StaticBody2D" unique_id=766590341]
-polygon = PackedVector2Array(61, -101, 153, -52, -30, 45, -127, -2)
+polygon = PackedVector2Array(20, -36, 71, -8, -30, 45, -79, 21)
 
 [node name="Door" type="Node2D" parent="." unique_id=931465619]
 position = Vector2(275, 151)
