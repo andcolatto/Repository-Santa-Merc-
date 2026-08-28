@@ -34,6 +34,7 @@ z_index = 2
 position = Vector2(224, 210)
 motion_mode = 1
 script = ExtResource("2_quvyc")
+speed = 150.0
 
 [node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
 position = Vector2(0, -1)
