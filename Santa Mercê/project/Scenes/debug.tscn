@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://ca2eqb1a7ahmv" path="res://Planning sprites/door placeholder.png" id="6_j2m1g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fee55"]
-size = Vector2(20, 88.46155)
+size = Vector2(20, 80.76924)
 
 [node name="Main" type="Node2D" unique_id=1381334392]
 
@@ -25,7 +25,7 @@ offset_bottom = 400.0
 color = Color(0, 0, 0, 1)
 
 [node name="Amanda" type="Node2D" parent="." unique_id=1790831288]
-position = Vector2(248, 131)
+position = Vector2(255, 172)
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Amanda" unique_id=438428807 groups=["Amanda"]]
 z_index = 2
@@ -38,7 +38,7 @@ texture = ExtResource("2_axs6p")
 offset = Vector2(0, 1)
 
 [node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=102753134]
-position = Vector2(0, 13)
+position = Vector2(0, 15)
 scale = Vector2(1, 0.52)
 shape = SubResource("RectangleShape2D_fee55")
 
