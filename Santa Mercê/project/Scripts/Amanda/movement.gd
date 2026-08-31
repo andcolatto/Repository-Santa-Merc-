@@ -1,6 +1,7 @@
 extends CharacterBody2D
 
-@export var speed: float = 300.0
+@export var speed: float = 99.0
+var run = 300
 @onready var IconZ = $CanvasGroup/Zicon
 
 func _ready() -> void:
@@ -10,6 +11,12 @@ func _physics_process(_delta: float) -> void:
 	var input_vector: Vector2 = Input.get_vector("ui_left", "ui_right", "ui_up", "ui_down")
 	
 	velocity = input_vector * speed
+	
+	# run system
+	if Input.is_action_pressed("Run"):
+		speed = 200
+	else: speed = 99.0
+	#run system
 
 	move_and_slide()
 
