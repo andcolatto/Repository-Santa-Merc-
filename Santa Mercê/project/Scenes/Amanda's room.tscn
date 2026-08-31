@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://dn34o4ngkr0hm"]
+
+[ext_resource type="Script" uid="uid://bjowwkq7eyb2g" path="res://Scripts/Amanda/movement.gd" id="1_h21oq"]
+[ext_resource type="Texture2D" uid="uid://cgdxisow5chj8" path="res://Planning sprites/amanda placeholder.png" id="2_4sunf"]
+[ext_resource type="Texture2D" uid="uid://bh77ywgrvgxu" path="res://Icon/intIcon.png" id="3_1p3ai"]
+[ext_resource type="Texture2D" uid="uid://cth175lq53l1j" path="res://Sprites/debug background2.png" id="4_gbi80"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oeema"]
+size = Vector2(20, 80.76924)
+
+[node name="main" type="Node2D" unique_id=482864434]
+
+[node name="Amanda" type="Node2D" parent="." unique_id=1897238483]
+position = Vector2(255, 172)
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Amanda" unique_id=732801098 groups=["Amanda"]]
+z_index = 2
+motion_mode = 1
+script = ExtResource("1_h21oq")
+
+[node name="Amanda placeholder" type="Sprite2D" parent="Amanda/CharacterBody2D" unique_id=2094292890]
+position = Vector2(0, -1)
+texture = ExtResource("2_4sunf")
+offset = Vector2(0, 1)
+
+[node name="HitBox" type="CollisionShape2D" parent="Amanda/CharacterBody2D" unique_id=277687197]
+position = Vector2(0, 15)
+scale = Vector2(1, 0.52)
+shape = SubResource("RectangleShape2D_oeema")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="Amanda/CharacterBody2D" unique_id=1946723319]
+
+[node name="Zicon" type="Sprite2D" parent="Amanda/CharacterBody2D/CanvasGroup" unique_id=851158698]
+visible = false
+position = Vector2(-2, -55)
+texture = ExtResource("3_1p3ai")
+
+[node name="Debug background" type="Sprite2D" parent="." unique_id=1890216131]
+texture = ExtResource("4_gbi80")
+offset = Vector2(230, 200)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Debug background" unique_id=2009730961]
+z_index = -1
+offset_right = 460.0
+offset_bottom = 400.0
+color = Color(0, 0, 0, 1)
