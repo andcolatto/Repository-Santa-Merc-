@@ -25,32 +25,34 @@ offset_right = 460.0
 offset_bottom = 400.0
 color = Color(0, 0, 0, 1)
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=438428807 groups=["Amanda"]]
+[node name="Amanda" type="CharacterBody2D" parent="." unique_id=438428807 groups=["Amanda"]]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(255, 172)
 motion_mode = 1
 script = ExtResource("2_fee55")
 
-[node name="Amanda placeholder" type="Sprite2D" parent="CharacterBody2D" unique_id=833914404]
+[node name="Amanda placeholder" type="Sprite2D" parent="Amanda" unique_id=833914404]
 z_index = 1
 y_sort_enabled = true
 position = Vector2(0, -1)
 texture = ExtResource("2_axs6p")
 offset = Vector2(0, 1)
 
-[node name="HitBox" type="CollisionShape2D" parent="CharacterBody2D" unique_id=102753134]
+[node name="HitBox" type="CollisionShape2D" parent="Amanda" unique_id=102753134]
 z_index = 1
 y_sort_enabled = true
 scale = Vector2(1, 0.52)
 shape = SubResource("RectangleShape2D_fee55")
 
-[node name="CanvasGroup" type="CanvasGroup" parent="CharacterBody2D" unique_id=86083422]
+[node name="CanvasGroup" type="CanvasGroup" parent="Amanda" unique_id=86083422]
 z_index = 1
 y_sort_enabled = true
 
-[node name="Zicon" type="Sprite2D" parent="CharacterBody2D/CanvasGroup" unique_id=299987911]
+[node name="Zicon" type="Sprite2D" parent="Amanda/CanvasGroup" unique_id=299987911]
 visible = false
+z_index = 1
+y_sort_enabled = true
 position = Vector2(-2, -55)
 texture = ExtResource("4_5mfbk")
 
@@ -123,7 +125,7 @@ metadata/_edit_group_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Computer2" unique_id=611673108]
 texture = ExtResource("4_fee55")
 
-[connection signal="tree_entered" from="Computer/PC Collision/PC Collision (polygon)" to="CharacterBody2D" method="_on_pc_collision_polygon_tree_entered"]
-[connection signal="body_entered" from="Computer/PC Collision/PC Collision (polygon)/Area2D" to="CharacterBody2D" method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Computer/PC Collision/PC Collision (polygon)/Area2D" to="CharacterBody2D" method="_on_area_2d_body_exited"]
-[connection signal="tree_entered" from="Computer/PC Collision/PC Collision (polygon)/Area2D/PC Collision (polygon)2" to="CharacterBody2D" method="_on_pc_collision_polygon_tree_entered"]
+[connection signal="tree_entered" from="Computer/PC Collision/PC Collision (polygon)" to="Amanda" method="_on_pc_collision_polygon_tree_entered"]
+[connection signal="body_entered" from="Computer/PC Collision/PC Collision (polygon)/Area2D" to="Amanda" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Computer/PC Collision/PC Collision (polygon)/Area2D" to="Amanda" method="_on_area_2d_body_exited"]
+[connection signal="tree_entered" from="Computer/PC Collision/PC Collision (polygon)/Area2D/PC Collision (polygon)2" to="Amanda" method="_on_pc_collision_polygon_tree_entered"]
