@@ -2,7 +2,7 @@ extends CharacterBody2D
 
 @export var speed: float = 99.0
 var run = 300
-@onready var IconZ = $CanvasGroup/Zicon
+@onready var IconZ = $CanvasGroup
 
 func _ready() -> void:
 	motion_mode = CharacterBody2D.MOTION_MODE_FLOATING
