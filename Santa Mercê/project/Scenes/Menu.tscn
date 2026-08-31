@@ -44,8 +44,8 @@ text = "New Game"
 
 [node name="menubackground" type="Sprite2D" parent="MenuHUD" unique_id=1667516001]
 z_index = -1
-position = Vector2(230.99998, 199.5)
-scale = Vector2(0.4472656, 0.3896484)
+position = Vector2(230.00002, 199.75002)
+scale = Vector2(0.44921875, 0.39111325)
 texture = ExtResource("6_idohh")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=642123136]
