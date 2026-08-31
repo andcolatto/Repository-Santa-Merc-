@@ -151,7 +151,7 @@ script = ExtResource("1_3kf3n")
 
 [node name="menubackground" type="AnimatedSprite2D" parent="MenuHUD" unique_id=1859514598]
 modulate = Color(0.021373399, 0.31452218, 0.39521667, 1)
-position = Vector2(230.75, 202.13861)
+position = Vector2(224, 200.00002)
 scale = Vector2(-1.5571932, 2.2510726)
 sprite_frames = SubResource("SpriteFrames_ry7xe")
 animation = &"menuAnimation"
@@ -167,12 +167,22 @@ text = "Santa Mercê"
 label_settings = SubResource("LabelSettings_vko3y")
 
 [node name="NG" type="Button" parent="MenuHUD" unique_id=320542299]
-offset_left = 185.0
+offset_left = 16.0
 offset_top = 208.0
-offset_right = 278.0
-offset_bottom = 239.0
+offset_right = 106.0
+offset_bottom = 227.0
 theme_override_fonts/font = ExtResource("2_6pedr")
 text = "New Game"
+flat = true
+
+[node name="exit" type="Button" parent="MenuHUD" unique_id=1558098557]
+offset_left = 16.0
+offset_top = 232.0
+offset_right = 68.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("2_6pedr")
+text = "exit"
+flat = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=642123136]
 position = Vector2(230, 200)

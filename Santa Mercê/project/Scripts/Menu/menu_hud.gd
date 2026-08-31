@@ -1,6 +1,8 @@
 extends CanvasGroup
 
 @onready var NGb = $NG # is a variable for get New Game button
+@onready var Entersfx = $"../Enter"
+@onready var exitbtn = $exit
 @onready var ESFX = $"../NewGame"
 @onready var SeFX = $"../Select"
 @onready var cam2D = $"../Camera2D"
@@ -16,5 +18,11 @@ func _process(_delta: float) -> void:
 		ESFX.play()
 		await get_tree().create_timer(1).timeout
 		get_tree().change_scene_to_file("res://Scenes/debug.tscn") #Simple Script for change scenes 
+		
+	
+	if exitbtn.button_pressed:
+		Entersfx.play()
+		await get_tree().create_timer(0.50).timeout
+		get_tree().quit()
 	
 	pass
