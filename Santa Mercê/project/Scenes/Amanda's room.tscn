@@ -104,8 +104,8 @@ z_index = 1
 y_sort_enabled = true
 
 [node name="Zicon" type="Sprite2D" parent="Amanda/CanvasGroup" unique_id=922227743]
-z_index = 1
-y_sort_enabled = true
+visible = false
+z_index = 2
 position = Vector2(-2, -55)
 texture = ExtResource("3_1p3ai")
 
