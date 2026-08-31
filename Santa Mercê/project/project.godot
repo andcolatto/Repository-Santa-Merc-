@@ -116,9 +116,9 @@ Run={
 "meta_pressed": false,
 "pressed": false,
 "keycode": 0,
-"physical_keycode": 4194325,
+"physical_keycode": 88,
 "key_label": 0,
-"unicode": 0,
+"unicode": 120,
 "location": 0,
 "echo": false,
 "script": null
