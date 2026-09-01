@@ -156,6 +156,8 @@ scale = Vector2(-1.5571932, 2.2510726)
 sprite_frames = SubResource("SpriteFrames_ry7xe")
 animation = &"menuAnimation"
 autoplay = "menuAnimation"
+frame = 8
+frame_progress = 0.2446997
 speed_scale = 0.19
 
 [node name="name" type="Label" parent="MenuHUD" unique_id=62606709]
