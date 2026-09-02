@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bocpsscyohldk"]
+
+[ext_resource type="Script" uid="uid://bjowwkq7eyb2g" path="res://Assets/Scripts/Amanda/movement.gd" id="1_ji6qs"]
+[ext_resource type="Texture2D" uid="uid://cgdxisow5chj8" path="res://Assets/Planning sprites/amanda placeholder.png" id="2_gdpf2"]
+[ext_resource type="Texture2D" uid="uid://bh77ywgrvgxu" path="res://Assets/Icon/intIcon.png" id="3_j28x2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8ooc"]
+size = Vector2(20, 80.76924)
+
+[node name="Amanda" type="CharacterBody2D" unique_id=407943652 groups=["Amanda"]]
+z_index = 1
+y_sort_enabled = true
+motion_mode = 1
+script = ExtResource("1_ji6qs")
+
+[node name="Amanda placeholder" type="Sprite2D" parent="." unique_id=1962422575]
+z_index = 1
+y_sort_enabled = true
+position = Vector2(0, -1)
+texture = ExtResource("2_gdpf2")
+offset = Vector2(0, 1)
+
+[node name="HitBox" type="CollisionShape2D" parent="." unique_id=977523158]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(1, 0.52)
+shape = SubResource("RectangleShape2D_k8ooc")
+
+[node name="CanvasGroup" type="CanvasGroup" parent="." unique_id=178963517]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Zicon" type="Sprite2D" parent="CanvasGroup" unique_id=1929160573]
+visible = false
+z_index = 2
+position = Vector2(-2, -55)
+texture = ExtResource("3_j28x2")

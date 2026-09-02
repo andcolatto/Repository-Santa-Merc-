@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b2fns6vulk6x3"
+path="res://.godot/imported/New Game.wav-a9a521d644abd878a428a3eda877d165.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/New Game.wav"
+dest_files=["res://.godot/imported/New Game.wav-a9a521d644abd878a428a3eda877d165.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

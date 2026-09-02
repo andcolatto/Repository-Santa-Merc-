@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://dn34o4ngkr0hm"]
+
+[ext_resource type="Texture2D" uid="uid://dlbyvuovarm31" path="res://Assets/Sprites/Amanda's room background2.png" id="1_tx6mt"]
+[ext_resource type="PackedScene" uid="uid://oh4g3etlvw4q" path="res://Assets/Scenes/Furniture/Computer.tscn" id="2_ucoe0"]
+[ext_resource type="PackedScene" uid="uid://dkbdjtw8vva2b" path="res://Assets/Scenes/Furniture/Bed.tscn" id="3_otd0b"]
+[ext_resource type="PackedScene" uid="uid://ykgb2ew5owes" path="res://Assets/Scenes/Furniture/Trash.tscn" id="4_skeyx"]
+
+[node name="Amanda\'s room" type="Node2D" unique_id=482864434]
+y_sort_enabled = true
+
+[node name="Debug background" type="Sprite2D" parent="." unique_id=1890216131]
+texture = ExtResource("1_tx6mt")
+offset = Vector2(230, 200)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Debug background" unique_id=2009730961]
+z_index = -1
+offset_right = 460.0
+offset_bottom = 400.0
+color = Color(0, 0, 0, 1)
+
+[node name="Computer" parent="." unique_id=1501170317 instance=ExtResource("2_ucoe0")]
+position = Vector2(125, 220)
+
+[node name="Bed" parent="." unique_id=1642313123 instance=ExtResource("3_otd0b")]
+position = Vector2(261, 333)
+
+[node name="Trash" parent="." unique_id=2060626930 instance=ExtResource("4_skeyx")]
+position = Vector2(63, 276)

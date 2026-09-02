@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ykgb2ew5owes"]
+
+[ext_resource type="Texture2D" uid="uid://k2l5y2bnmcwe" path="res://Assets/Sprites/trash.png" id="1_0mpj5"]
+
+[node name="Trash" type="Sprite2D" unique_id=2060626930]
+z_index = 1
+y_sort_enabled = true
+texture = ExtResource("1_0mpj5")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1751948267]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.64, 0.36)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1513703378]
+z_index = 1
+y_sort_enabled = true
+polygon = PackedVector2Array(14.010033, 8.333374, -7.783348, 22.222229, -15.566696, 8.333374, 3.1133423, -5.555542)

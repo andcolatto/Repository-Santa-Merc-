@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://oh4g3etlvw4q"]
+
+[ext_resource type="Texture2D" uid="uid://cc0jgj1ggqs8x" path="res://Assets/Planning sprites/computer placeholder.png" id="1_neixe"]
+
+[node name="Computer" type="Node2D" unique_id=1501170317]
+z_index = 1
+y_sort_enabled = true
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1008825084]
+z_index = 1
+y_sort_enabled = true
+texture = ExtResource("1_neixe")
+
+[node name="PC Collision" type="StaticBody2D" parent="." unique_id=717238712]
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(1.3794899, 3.0829527)
+
+[node name="PC Collision (polygon)" type="CollisionPolygon2D" parent="PC Collision" unique_id=775922509]
+z_index = 1
+y_sort_enabled = true
+rotation = 0.0009789891
+scale = Vector2(4.2559867, 2.3120565)
+polygon = PackedVector2Array(3.233732, -4.635485, 9.877938, -1.8416054, -3.7451575, 3.7946506, -10.38944, 0.8604787)

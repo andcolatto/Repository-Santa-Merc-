@@ -1,0 +1,33 @@
+extends CanvasGroup
+
+@onready var NGb = $NG # is a variable for get New Game button
+@onready var Entersfx = $"../Enter"
+@onready var exitbtn = $exit
+@onready var ESFX = $"../NewGame"
+@onready var SeFX = $"../Select"
+@onready var cam2D = $"../Camera2D"
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(_delta: float) -> void:
+	if NGb.button_pressed:
+		ESFX.play()
+<<<<<<< Updated upstream:Santa Mercê/project/Scripts/Menu/menu_hud.gd
+		await get_tree().create_timer(1).timeout
+		get_tree().change_scene_to_file("res://Scenes/debug.tscn") #Simple Script for change scenes 
+		
+	
+	if exitbtn.button_pressed:
+		Entersfx.play()
+		await get_tree().create_timer(0.50).timeout
+		get_tree().quit()
+=======
+		await get_tree().create_timer(0.7).timeout
+		get_tree().change_scene_to_file("res://Assets/Scenes/debug.tscn") #Simple Script for change scenes 
+>>>>>>> Stashed changes:Santa Mercê/project/Assets/Scripts/Menu/menu_hud.gd
+	
+	pass

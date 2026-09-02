@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://shubvlopxymy"]
+
+[ext_resource type="AudioStream" uid="uid://3i2pt7aj3ye0" path="res://Assets/SFX/Enter.wav" id="1_3eaqr"]
+[ext_resource type="AudioStream" uid="uid://b2fns6vulk6x3" path="res://Assets/SFX/New Game.wav" id="2_a0xew"]
+[ext_resource type="AudioStream" uid="uid://b5lvu1fgedpvf" path="res://Assets/SFX/Select.wav" id="3_gr2wn"]
+[ext_resource type="Script" uid="uid://ptloxnb73fpj" path="res://Assets/Scripts/Menu/menu_hud.gd" id="4_u6u8b"]
+[ext_resource type="Texture2D" uid="uid://cl8ob4x6dxmli" path="res://Assets/Sprites/menu/img1.png" id="5_6oqgg"]
+[ext_resource type="Texture2D" uid="uid://d1c2clqroifnx" path="res://Assets/Sprites/menu/img2.png" id="6_j80op"]
+[ext_resource type="Texture2D" uid="uid://dn1stl1k4mamm" path="res://Assets/Sprites/menu/img3.png" id="7_youxh"]
+[ext_resource type="Texture2D" uid="uid://cebg03sa5eum" path="res://Assets/Sprites/menu/img4.png" id="8_e6swl"]
+[ext_resource type="Texture2D" uid="uid://tmsgo75y2iqo" path="res://Assets/Sprites/menu/img5.png" id="9_6pkt8"]
+[ext_resource type="Texture2D" uid="uid://crglj67nijwge" path="res://Assets/Sprites/menu/img6.png" id="10_l0war"]
+[ext_resource type="Texture2D" uid="uid://bhv7lgaunfbxt" path="res://Assets/Sprites/menu/img7.png" id="11_hxbtk"]
+[ext_resource type="Texture2D" uid="uid://cpmignan5x2tk" path="res://Assets/Sprites/menu/img8.png" id="12_fqka5"]
+[ext_resource type="Texture2D" uid="uid://dgh357th5vnp8" path="res://Assets/Sprites/menu/img9.png" id="13_mfrpm"]
+[ext_resource type="Texture2D" uid="uid://gwyfiqchkod7" path="res://Assets/Sprites/menu/img10.png" id="14_vfivv"]
+[ext_resource type="Texture2D" uid="uid://dwc6kb1mgbh15" path="res://Assets/Sprites/menu/img11.png" id="15_vaix4"]
+[ext_resource type="Texture2D" uid="uid://b01y8nctg64vu" path="res://Assets/Sprites/menu/img12.png" id="16_xn07x"]
+[ext_resource type="Texture2D" uid="uid://dngll88hceogk" path="res://Assets/Sprites/menu/img13.png" id="17_847vq"]
+[ext_resource type="Texture2D" uid="uid://lyoau7h7u2jn" path="res://Assets/Sprites/menu/img14.png" id="18_qkotw"]
+[ext_resource type="Texture2D" uid="uid://btldf8yi7hngw" path="res://Assets/Sprites/menu/img15.png" id="19_q3bgh"]
+[ext_resource type="Texture2D" uid="uid://chmkj7hnrkqky" path="res://Assets/Sprites/menu/img16.png" id="20_2jmmw"]
+[ext_resource type="Texture2D" uid="uid://babovbk3nwie2" path="res://Assets/Sprites/menu/img17.png" id="21_uxtai"]
+[ext_resource type="Texture2D" uid="uid://v8swlru77155" path="res://Assets/Sprites/menu/img18.png" id="22_owibx"]
+[ext_resource type="Texture2D" uid="uid://bvt0r7hiu8a8f" path="res://Assets/Sprites/menu/img19.png" id="23_lghiw"]
+[ext_resource type="Texture2D" uid="uid://hiow2yuxtoky" path="res://Assets/Sprites/menu/img20.png" id="24_lwixo"]
+[ext_resource type="Texture2D" uid="uid://cjktx2344thyq" path="res://Assets/Sprites/menu/img21.png" id="25_8suf8"]
+[ext_resource type="Texture2D" uid="uid://jhxsssqu0wej" path="res://Assets/Sprites/menu/img22.png" id="26_qknc0"]
+[ext_resource type="Texture2D" uid="uid://0kqfpqp1vb6s" path="res://Assets/Sprites/menu/img23.png" id="27_ta47d"]
+[ext_resource type="Texture2D" uid="uid://y4hqmmpe283p" path="res://Assets/Sprites/menu/img24.png" id="28_c5nwk"]
+[ext_resource type="Texture2D" uid="uid://xy3ycxeo6734" path="res://Assets/Sprites/menu/img25.png" id="29_0mh4q"]
+[ext_resource type="Texture2D" uid="uid://djxosoa5us68h" path="res://Assets/Sprites/menu/img26.png" id="30_ugh7d"]
+[ext_resource type="Texture2D" uid="uid://bapjukf6gg0jg" path="res://Assets/Sprites/menu/img27.png" id="31_sptrv"]
+[ext_resource type="Texture2D" uid="uid://mmi1ictpso1l" path="res://Assets/Sprites/menu/img28.png" id="32_uf54d"]
+[ext_resource type="Texture2D" uid="uid://7u1xofc4llq3" path="res://Assets/Sprites/menu/img29.png" id="33_1u3ra"]
+[ext_resource type="FontFile" uid="uid://jdewj2mna65g" path="res://Assets/Font/Nyntunkocom Font/Nyntunkocom.ttf" id="34_pfehb"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ry7xe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6oqgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j80op")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_youxh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e6swl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_6pkt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_l0war")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hxbtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_fqka5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_mfrpm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_vfivv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_vaix4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_xn07x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_847vq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_qkotw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_q3bgh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_2jmmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_uxtai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_owibx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_lghiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_lwixo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_8suf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_qknc0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ta47d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_c5nwk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_0mh4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ugh7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_sptrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_uf54d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_1u3ra")
+}],
+"loop": 1,
+"name": &"menuAnimation",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vko3y"]
+font = ExtResource("34_pfehb")
+
+[node name="Node2D" type="Node2D" unique_id=160114515]
+
+[node name="Enter" type="AudioStreamPlayer" parent="." unique_id=1038034181]
+stream = ExtResource("1_3eaqr")
+volume_db = -9.123
+
+[node name="NewGame" type="AudioStreamPlayer" parent="." unique_id=141810784]
+stream = ExtResource("2_a0xew")
+volume_db = 5.474
+
+[node name="Select" type="AudioStreamPlayer" parent="." unique_id=668149281]
+stream = ExtResource("3_gr2wn")
+
+[node name="MenuHUD" type="CanvasGroup" parent="." unique_id=1927890801]
+script = ExtResource("4_u6u8b")
+
+[node name="menubackground" type="AnimatedSprite2D" parent="MenuHUD" unique_id=1859514598]
+modulate = Color(0.021373399, 0.31452218, 0.39521667, 1)
+position = Vector2(224, 200.00002)
+scale = Vector2(-1.5571932, 2.2510726)
+sprite_frames = SubResource("SpriteFrames_ry7xe")
+animation = &"menuAnimation"
+autoplay = "menuAnimation"
+frame = 8
+frame_progress = 0.2446997
+speed_scale = 0.19
+
+[node name="name" type="Label" parent="MenuHUD" unique_id=62606709]
+offset_left = 177.0
+offset_top = 91.0
+offset_right = 274.0
+offset_bottom = 114.0
+text = "Santa Mercê"
+label_settings = SubResource("LabelSettings_vko3y")
+
+[node name="NG" type="Button" parent="MenuHUD" unique_id=320542299]
+offset_left = 16.0
+offset_top = 208.0
+<<<<<<< Updated upstream:Santa Mercê/project/Scenes/Menu.tscn
+offset_right = 106.0
+offset_bottom = 227.0
+theme_override_fonts/font = ExtResource("2_6pedr")
+=======
+offset_right = 278.0
+offset_bottom = 239.0
+theme_override_fonts/font = ExtResource("34_pfehb")
+>>>>>>> Stashed changes:Santa Mercê/project/Assets/Scenes/Scenes & locations/Menu.tscn
+text = "New Game"
+flat = true
+
+[node name="exit" type="Button" parent="MenuHUD" unique_id=1558098557]
+offset_left = 16.0
+offset_top = 232.0
+offset_right = 68.0
+offset_bottom = 263.0
+theme_override_fonts/font = ExtResource("2_6pedr")
+text = "exit"
+flat = true
+
+[node name="Camera" type="Camera2D" parent="." unique_id=642123136]
+position = Vector2(230, 200)
