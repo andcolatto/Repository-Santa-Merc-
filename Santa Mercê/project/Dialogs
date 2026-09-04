@@ -1,0 +1,104 @@
+extends CanvasLayer
+#talvez seja necessário corrigir a integrção com o jogo e mudar para a extensão do aqruivo que será usada de fato no projeto, mas a lógica está correta.
+#maybe it's necessary to correct the integration with the game and change the file extension to the one that are going to be used in fact on the projetc, but the logic it's correct.
+@onready var painel_dialogo: Control = $PainelDialogo
+@onready var texto_label: Label = $PainelDialogo/VBox/TextoLabel
+@onready var opcoes_container: VBoxContainer = $PainelDialogo/VBox/OpcoesContainer
+
+var dialogos: Dictionary = {
+	"computador": [
+		{"tipo": "texto", "fala": "É o seu computador."},
+		{"tipo": "texto", "fala": "Tem algumas planilhas do seu pai que não são editadas há anos."},
+		{"tipo": "texto", "fala": "Entre elas, tem seus jogos favoritos, como ‘Plantas e Rubis’."},
+		{
+			"tipo": "escolha",
+			"pergunta": "Gostaria de jogar?",
+			"opcoes": [
+				{"texto": "Sim", "destino": "computador_sim"},
+				{"texto": "Não", "destino": "computador_nao"}
+			]
+		}
+	],
+	"computador_sim": [
+		{"tipo": "texto", "fala": "Você clica para iniciar o jogo, mas parece que você esqueceu de atualizar o Windows."},
+		{"tipo": "texto", "fala": "Seu computador reinicia… Você lembra que deve ir para escola, certo?"}
+	],
+	"computador_nao": [
+		{"tipo": "texto", "fala": "Desligando… Atualizando Windows…"}
+	],
+	"cama": [
+		{"tipo": "texto", "fala": "Uma cama nova! Convenientemente arrumada."},
+		{"tipo": "texto", "fala": "O colchão é macio, mas sua mãe não deixa você se deitar até que os lençois tenham sido lavados."},
+		{"tipo": "texto", "fala": "Como se você já não tivesse dormido nessa cama."},
+		{"tipo": "texto", "fala": "Lógica de mãe, não pergunte."}
+	],
+	"lixeira": [
+		{"tipo": "texto", "fala": "Há algumas sketchs que você fez durante a viagem."},
+		{"tipo": "texto", "fala": "Você realmente não é boa desenhando mãos."}
+	]
+}
+
+var chave_atual: String = ""
+var indice_fala: int = 0
+var dialogo_ativo: bool = false
+
+func _ready() -> void:
+	painel_dialogo.hide()
+
+func iniciar_dialogo(chave: String) -> void:
+	if not dialogos.has(chave):
+		return
+	
+	chave_atual = chave
+	indice_fala = 0
+	dialogo_ativo = true
+	painel_dialogo.show()
+	exibir_passo()
+
+func _unhandled_input(event: InputEvent) -> void:
+	if not dialogo_ativo:
+		return
+	
+	var elemento_atual = dialogos[chave_atual][indice_fala]
+	if elemento_atual["tipo"] == "escolha":
+		return
+		
+	if event.is_action_pressed("ui_accept") or (event is InputEventMouseButton and event.pressed and event.button_index == MOUSE_BUTTON_LEFT):
+		avancar_dialogo()
+
+func avancar_dialogo() -> void:
+	indice_fala += 1
+	var lista_atual: Array = dialogos[chave_atual]
+	
+	if indice_fala < lista_atual.size():
+		exibir_passo()
+	else:
+		encerrar_dialogo()
+
+func exibir_passo() -> void:
+	limpar_opcoes()
+	var elemento_atual: Dictionary = dialogos[chave_atual][indice_fala]
+	
+	if elemento_atual["tipo"] == "texto":
+		texto_label.text = elemento_atual["fala"]
+		
+	elif elemento_atual["tipo"] == "escolha":
+		texto_label.text = elemento_atual["pergunta"]
+		
+		for opcao in elemento_atual["opcoes"]:
+			var botao := Button.new()
+			botao.text = opcao["texto"]
+			botao.pressed.connect(func(): selecionar_opcao(opcao["destino"]))
+			opcoes_container.add_child(botao)
+
+func selecionar_opcao(destino: String) -> void:
+	limpar_opcoes()
+	iniciar_dialogo(destino)
+
+func limpar_opcoes() -> void:
+	for child in opcoes_container.get_children():
+		child.queue_free()
+
+func encerrar_dialogo() -> void:
+	dialogo_ativo = false
+	painel_dialogo.hide()
